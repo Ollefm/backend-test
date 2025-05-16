@@ -5,10 +5,7 @@ exports.getProducts = async function (req, res) {
     const page = Math.abs(parseInt(req.query.page, 10)) || 1;
     const pageSize = Math.abs(parseInt(req.query.page_size, 10)) || 10;
 
-    const products = req.app.locals.products;
-    const attributeMeta = req.app.locals.attributeMeta;
-
-    const result = await getPageProducts(products, attributeMeta, page, pageSize);
+    const result = await getPageProducts(page, pageSize);
     res.json(result);
     
   } catch (err) {

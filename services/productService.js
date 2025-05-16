@@ -1,13 +1,12 @@
 const { getProducts, getAttributeMeta } = require("../repository/productRepository");
 
-exports.getPageProducts = async function (products, attributeMeta, page, pageSize) {
+exports.getPageProducts = async function (page, pageSize) {
   try {
-
-    // If, for some reason, they do not exist, fetch them!
-    if(!products || !attributeMeta){
-      products = await getProducts();
-      attributeMeta = await getAttributeMeta();
-    }
+     
+    //live-fetching product.json and attrubute_meta.json
+     const products = await getProducts();
+     const attributeMeta = await getAttributeMeta();
+    
 
     // sort on name (sortering borde ske i queryn till databasen ej såhär)
     products.sort((a, b) => {
