@@ -10,4 +10,5 @@ Follow these steps to set up and run the project locally:
 5. **When dependencies are installed, start the development server:** <pre> ```npm run dev ``` </pre>
 6. **If you want to run the test** <pre> ```npm run test ``` </pre>
 7. **The server will be running on:** http://localhost:3000/
+8. **Example** Go to http://localhost:3000/product?page=1&page_size=5 and adjust the query parameters: ```page``` and ```page_size``` to fetch different pages and number of products per page.  
 
