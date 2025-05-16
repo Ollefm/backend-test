@@ -13,7 +13,7 @@ exports.getPageProducts = async function (page, pageSize) {
       if (a.name.toLowerCase() < b.name.toLowerCase()) {
         return -1;
       }
-      if (a.name.toLowerCase > b.name.toLowerCase()) {
+      if (a.name.toLowerCase() > b.name.toLowerCase()) {
         return 1;
       }
       return 0;
